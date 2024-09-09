@@ -20,3 +20,37 @@
 <p align="center"> Pi-Hole & Unbound install script.
     <br>
 </p>
+
+
+## 🤔 Why?
+
+I've used An ADBlocker for years and as of recently started using it as my recursive DNS as well. I thought what better way than to make a script that setups up the Unbound portion and add some xtra tools I use with it.
+
+## :gear: Instructions
+
+- Make sure dependencies are installed.
+
+```shell
+# Ubuntu/Debian
+sudo apt install git curl
+```
+
+- Clone the repo
+```shell
+git clone https://github.com/coloredbytes/nocookies4u.git
+```
+
+- Run the script
+```shell
+./install.sh
+```
+
+## What the script does.
+
+- Installs Unbound vased off [docs](https://docs.pi-hole.net/guides/dns/unbound/) here.
+
+- Installs a white list based off this [project](https://github.com/anudeepND/whitelist.git).
+
+## 🎉 Acknowledgements
+
+Thanks to @omgrubberduck for showing me the whitelist project.
