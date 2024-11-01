@@ -24,7 +24,7 @@
 
 ## 🤔 Why?
 
-I've used An ADBlocker for years and as of recently started using it as my recursive DNS as well. I thought what better way than to make a script that setups up the Unbound portion and add some xtra tools I use with it.
+I've used An ADBlocker for years and as of recently started using it as my recursive DNS as well. I thought what better way than to make a script that setups up the Unbound portion and add some extra tools I use with it.
 
 ## :gear: Instructions
 
@@ -47,10 +47,10 @@ git clone https://github.com/coloredbytes/nocookies4u.git
 
 ## What the script does.
 
-- Installs Unbound vased off [docs](https://docs.pi-hole.net/guides/dns/unbound/) here.
+- Installs Pi-Hole & Unbound based off [docs](https://docs.pi-hole.net/guides/dns/unbound/) here.
 
 - Installs a white list based off this [project](https://github.com/anudeepND/whitelist.git).
 
 ## 🎉 Acknowledgements
 
-Thanks to @omgrubberduck for showing me the whitelist project.
+Thanks to [omgrubberduck](https://github.com/omgrubberduck) for showing me the whitelist project.
