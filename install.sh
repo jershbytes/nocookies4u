@@ -17,16 +17,8 @@ wget https://www.internic.net/domain/named.root -qO- | sudo tee /var/lib/unbound
 # Copy config over
 cp pi-hole.conf /etc/unbound/unbound.conf.d/pi-hole.conf
 
-# Test Unbound
-sudo service unbound restart
-dig pi-hole.net @127.0.0.1 -p 5335
-
 # Incrase edns packet size
 echo 'edns-packet-max=1232' | sudo tee -a /etc/dnsmasq.d/99-edns.conf
-
-# Second Test
-dig fail01.dnssec.works @127.0.0.1 -p 5335
-dig dnssec.works @127.0.0.1 -p 5335
 
 # Disable the Service
 systemctl is-active unbound-resolvconf.service
