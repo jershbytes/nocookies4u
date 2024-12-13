@@ -9,15 +9,9 @@ curl -sSL https://install.pi-hole.net | bash
 ### Unbound Install ### 
 
 # Install unbound
-if [ -f /etc/debian_version ]; then
-    sudo apt update
-    sudo apt install -y unbound
-elif [ -f /etc/redhat-release ]; then
-    sudo yum install -y unbound
-else
-    echo "Unsupported OS"
-    exit 1
-fi
+sudo apt update
+sudo apt install -y unbound
+
 
 # grab root hints
 wget https://www.internic.net/domain/named.root -qO- | sudo tee /var/lib/unbound/root.hints
