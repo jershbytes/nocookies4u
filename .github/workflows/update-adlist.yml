@@ -23,6 +23,6 @@ jobs:
         run: |
           git config --local user.name "GitHub Action"
           git config --local user.email "action@github.com"
-          git add duck_list.txt
+          git add ./adlist/duck_list.txt
           git commit -m "Update combined adlist [$(date +'%Y-%m-%d %H:%M:%S')]"
           git push
