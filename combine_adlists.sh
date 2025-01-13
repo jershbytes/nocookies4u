@@ -16,7 +16,7 @@ ADLISTS=(
 )
 
 # File to store the consolidated list
-OUTPUT_FILE="duck_list.txt"
+OUTPUT_FILE="$(dirname "$0")/duck_list.txt"
 
 # Temporary file for processing
 TEMP_FILE=$(mktemp)

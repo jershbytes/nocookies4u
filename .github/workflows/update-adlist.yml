@@ -1,0 +1,28 @@
+name: Update Adlist
+
+on:
+  schedule:
+    - cron: '0 3 * * *' # Runs daily at 3 AM UTC
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Make Script Executable
+        run: chmod +x ./combine_adlists.sh
+
+      - name: Run Adlist Script
+        run: ./combine_adlists.sh
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.name "GitHub Action"
+          git config --local user.email "action@github.com"
+          git add duck_list.txt
+          git commit -m "Update combined adlist [$(date +'%Y-%m-%d %H:%M:%S')]"
+          git push
