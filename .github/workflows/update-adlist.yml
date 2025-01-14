@@ -1,13 +1,11 @@
 name: Update Adlist
 
 on:
-  schedule:
-    - cron: '0 3 * * *' # Runs daily at 3 AM UTC
   workflow_dispatch: # Allows manual trigger
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout Code
