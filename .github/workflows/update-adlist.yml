@@ -2,6 +2,9 @@ name: Update Adlist
 
 on:
   workflow_dispatch: # Allows manual trigger
+  schedule:
+    - cron: '0 8 * * 4' # 3 AM Detroit time in UTC
+
 
 jobs:
   build:
